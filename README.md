@@ -1,8 +1,4 @@
-# css-positioning
-
-==========
-**CSS  Positionings**
-==========
+# CSS  Positionings
 
 > - **Static:** (HTML default)
 
