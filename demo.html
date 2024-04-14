@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Positioning Demo</title>
+    <style>
+
+        header>h1 {
+            background-color: blue;
+            color: white;
+            padding: 20px;
+            font-size: 2.5rem;
+        }
+        h1 {
+            margin: 0px;
+        }
+
+        button {
+            background-color: #4caf50;
+            padding: 10px 20px;
+            border-radius: 4px;
+            margin: 10px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            text-align: center;
+        }
+
+        .four-types {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .outer-div {
+            display: block;
+            width: 200px;
+            height: 340px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+
+        .box {
+            background-color:bisque;
+            width: 200px;
+            height: 200px;
+            border: 1px solid #ccc;
+            margin-top: 10px;
+        }
+
+        .static .box {
+            position: static;
+            left: 50px;
+            right: 50px;
+        }
+        .static .box>p {
+            text-align: center;
+            font-size: 2rem;
+            padding-top: 50px;
+        }
+
+        .relative .box {
+            position: relative;
+            left: 50px;
+            top: 50px;
+            background-color: burlywood;
+        }
+        .relative .box>p {
+            text-align: center;
+            font-size: 2rem;
+            padding-top: 50px;
+        }
+        .absolute .box {
+            position: absolute;
+            top: 600px;
+            background-color: aqua;
+        }
+
+        .absolute .box>p {
+            text-align: center;
+            font-size: 2rem;
+            padding-top: 50px;
+        }
+
+        .fixed .box {
+            position: fixed;
+            right: 50px;
+            bottom: 50px;
+            background-color:teal;
+        }
+        .fixed .box>p {
+            text-align: center;
+            font-size: 2rem;
+            padding-top: 50px;
+            color: white;
+        }
+
+        #four-demos {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        footer {
+            display: block;
+            background-color: #ccc;
+            padding: 10px;
+            width: 100%;
+        }
+
+        #create-space {
+            height: 1500px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CSS Positioning Demo</h1>
+    </header>
+    <div class="four-types">
+        <button id="static-btn">Static Postioning</button>
+        <button id="relative-btn">Relative Postioning</button>
+        <button id="absolute-btn">Absolute Postioning</button>
+        <button id="fixed-btn">Fixed Postioning</button>
+    </div>
+    <main id="four-demos">
+        <div class="outer-div static">
+            <h2>Static Positioning</h2>
+            <code>
+                "position: static;"
+                <br>
+                "left: 50px;"
+                <br>
+                "top: 50px;"
+                <br>
+            </code>
+            <div class="box">
+                <p>Static</p>
+            </div>
+        </div>
+
+        <div class="outer-div relative">
+            <h2>Relative Positioning</h2>
+            <code>
+                "position: relative;"
+                <br>
+                "left: 50px;"
+                <br>
+                "top: 50px;"
+                <br>
+            </code>
+            <div class="box">
+                <p>Relative</p>
+            </div>
+        </div>
+
+        <div class="outer-div absolute">
+            <h2>Absolute Positioning</h2>
+            <code>
+                "position: absolute;"
+                <br>
+                "top: 600px;"
+                <br>
+            </code>
+            <div class="box">
+                <p>Absolute</p>
+            </div>
+        </div>
+
+        <div class="outer-div fixed">
+            <h2>Fixed Positioning</h2>
+            <code>
+                "position: fixed;"
+                <br>
+                "right: 50px;"
+                <br>
+                "bottom: 50px;"
+                <br>
+            </code>
+            <div class="box">
+                <p>Fixed</p>
+            </div>
+        </div>
+        <div id="create-space">
+        </div>
+    </main>
+    <footer>
+        <p>Copyright ©️ Ajit Garg</p>
+    </footer>
+</body>
+</html>
