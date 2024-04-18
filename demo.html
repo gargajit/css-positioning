@@ -54,6 +54,7 @@
             position: static;
             left: 50px;
             right: 50px;
+            z-index: 0;
         }
         .static .box>p {
             text-align: center;
@@ -72,9 +73,15 @@
             font-size: 2rem;
             padding-top: 50px;
         }
+
+        .absolute {
+            position: relative;
+        }
         .absolute .box {
             position: absolute;
-            top: 600px;
+            top: 100px;
+            left: 80px;
+            z-index: -1;
             background-color: aqua;
         }
 
@@ -87,7 +94,8 @@
         .fixed .box {
             position: fixed;
             right: 50px;
-            bottom: 50px;
+            top: 50px;
+            z-index: -1;
             background-color:teal;
         }
         .fixed .box>p {
@@ -190,5 +198,45 @@
     <footer>
         <p>Copyright ©️ Ajit Garg</p>
     </footer>
+    <script>
+        const staticBtn = document.getElementById('static-btn');
+        const relativeBtn = document.getElementById('relative-btn');
+        const absoluteBtn = document.getElementById('absolute-btn');
+        const fixedBtn = document.getElementById('fixed-btn');
+
+        const staticPositioning = document.querySelector('.static');
+        const relativePositioning = document.querySelector('.relative');
+        const absolutePositioning = document.querySelector('.absolute');
+        const fixedPositioning = document.querySelector('.fixed');
+
+        staticBtn.addEventListener('click', () => {
+            staticPositioning.style.display = 'block';
+            relativePositioning.style.display = 'none';
+            absolutePositioning.style.display = 'none';
+            fixedPositioning.style.display = 'none';
+        });
+
+        relativeBtn.addEventListener('click', () => {
+            staticPositioning.style.display = 'none';
+            relativePositioning.style.display = 'block';
+            absolutePositioning.style.display = 'none';
+            fixedPositioning.style.display = 'none';
+        });
+
+        absoluteBtn.addEventListener('click', () => {
+            staticPositioning.style.display = 'none';
+            relativePositioning.style.display = 'none';
+            absolutePositioning.style.display = 'block';
+            fixedPositioning.style.display = 'none';
+        });
+
+        fixedBtn.addEventListener('click', () => {
+            staticPositioning.style.display = 'none';
+            relativePositioning.style.display = 'none';
+            absolutePositioning.style.display = 'none';
+            fixedPositioning.style.display = 'block';
+        });
+    </script>
+
 </body>
 </html>
